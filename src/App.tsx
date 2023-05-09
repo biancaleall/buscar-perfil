@@ -40,7 +40,7 @@ function App() {
         </header>
         <main>
           <div className="form">
-            <h1>Faça sua busca a baixo:</h1>
+            <h1>Faça sua busca abaixo:</h1>
             <input
               type="text"
               placeholder="Digite um username"
