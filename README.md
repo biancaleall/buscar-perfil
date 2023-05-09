@@ -8,7 +8,7 @@ App para mostrar informações de usuário do Github.
 
 # Características <br/>
 * Busca pelo nome de usuário.
-* Retorna as seguintes informações: foto, nome, descrição e o acesso ao perfil diretamente no GitHub.
+* Retornar as seguintes informações: foto, nome, descrição e o acesso ao perfil diretamente no GitHub.
 * Apresenta mensagem de erro caso o usuário buscado não exista.
 
 # Instalação <br/>
