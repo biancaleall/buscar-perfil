@@ -1,24 +1,73 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useState } from 'react';
+
+type GITHUBResponse = {
+  name: string;
+  avatar_url: string;
+  bio: string;
+};
 
 function App() {
+  const [userName, setUserName] = useState('');
+  const [name, setName] = useState('');
+  const [bio, setBio] = useState('Aguardando..');
+  const [avatarURL, setAvatarURL] = useState('');
+
+  const handleSearch = () => {
+    axios
+      .get<GITHUBResponse>(`https://api.github.com/users/${userName}`)
+      .then(res => {
+        setName(res.data.name);
+        setBio(res.data.bio);
+        setAvatarURL(res.data.avatar_url);
+      })
+      .catch(err => {
+        alert('Usuário não encontrado!');
+        console.log(err);
+      });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-app">
+      <div className="container">
+        <header className="header-top">
+          <ul>
+            <li>
+              Buscador de <br /> Perfis do GITHUB
+            </li>
+          </ul>
+        </header>
+        <main>
+          <div className="form">
+            <h1>Faça sua busca a baixo:</h1>
+            <input
+              type="text"
+              placeholder="Digite um username"
+              onChange={e => setUserName(e.target.value)}
+            />
+            <button onClick={handleSearch}>Buscar</button>
+          </div>
+          <div className="content">
+            <div>
+              {avatarURL ? (
+                <img src={avatarURL} alt="Avatar" />
+              ) : (
+                <div className="avatar-placeholder"></div>
+              )}
+              <h1>{name}</h1>
+              <p>{bio}</p>
+              {name ? (
+                <h1>
+                  <a target="_blank" href={`https://github.com/${userName}`}>
+                    Acesse o perfil
+                  </a>
+                </h1>
+              ) : null}
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
