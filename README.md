@@ -4,7 +4,7 @@
 
 ![alt text](https://cdn.discordapp.com/attachments/974017667386183712/1105630395879395429/screencapture-localhost-3000-2023-05-09-19_59_57.png)
 
-App para mostrar informações de usuário do Github.
+App para localizar perfis e informações de usuários do GitHub.
 
 # Características <br/>
 * Busca pelo nome de usuário.
