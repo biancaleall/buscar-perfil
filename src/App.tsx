@@ -36,7 +36,8 @@ function App() {
         <header className="header-top">
           <ul>
             <li>
-              Buscador de <br /> Perfis do GITHUB
+              Localizador de perfis
+              <br /> do GitHub
             </li>
           </ul>
         </header>
