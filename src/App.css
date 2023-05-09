@@ -411,14 +411,17 @@ h1 a:hover {
   }
 
   .container-app .container .header-top ul li {
-    font-size: 1.2rem;
-    margin-left: -34px;
+    font-size: 1.6rem;
+    margin-left: 70px;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .container-app .container main .form h1 {
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 20px;
-    margin-left: 4px;
+    margin-left: 3px;
     font-family: 'Inter';
     text-align: center;
   }
