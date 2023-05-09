@@ -389,27 +389,33 @@ h1 a:hover {
   .container-app .container {
     width: 80%;
     height: 80%;
+    background-color: #191622;
   }
 
   .container-app .container main .content div {
-    width: 240px;
-    height: 220px;
+    width: 320px;
+    height: 290px;
+    background-color: #272a37;
   }
 
   .container-app .container main button {
-    width: 230px;
+    width: 300px;
+    background-color: #272a37;
   }
 
   .container-app .container main input {
-    width: 230px;
+    width: 300px;
+    background-color: #272a37;
   }
 
   .container-app .container .header-top ul li {
-    font-size: 1.2rem;
+    font-size: 1, 6rem;
+    margin-left: -40px;
   }
 
   .container-app .container main .form h1 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
+    margin-left: 4px;
   }
 }
