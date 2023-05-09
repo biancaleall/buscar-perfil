@@ -8,6 +8,8 @@ type GITHUBResponse = {
   bio: string;
 };
 
+document.title = 'Buscar Perfil';
+
 function App() {
   const [userName, setUserName] = useState('');
   const [name, setName] = useState('');
